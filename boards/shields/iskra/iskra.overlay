@@ -2,6 +2,7 @@
  * Iskra shield overlay (nice_nano_v2, Pro Micro footprint)
  */
 
+#include <dt-bindings/zmk/matrix_transform.h>
 #include <physical_layouts.dtsi>
 
 / {
@@ -15,10 +16,11 @@
 		compatible = "zmk,matrix-transform";
 		columns = <4>;
 		rows = <3>;
+		/* Only 10 keys populated: 3x4 matrix with two empty positions (row 0 col 3, row 1 col 3) */
 		map = <
-			0 1 2 3
-			4 5 6 7
-			8 9 10 11
+			RC(0,0) RC(0,1) RC(0,2)
+			RC(1,0) RC(1,1) RC(1,2)
+			RC(2,0) RC(2,1) RC(2,2) RC(2,3)
 		>;
 	};
 
@@ -27,14 +29,17 @@
 		display-name = "Default Layout";
 		transform = <&iskra_transform>;
 		kscan = <&kscan0>;
+		/* 10 keys arranged as:
+		 * 1 2 3 _
+		 * 4 5 6 _
+		 * 7 8 9 0
+		 */
 		keys = <&key_physical_attrs 100 100    0    0 0 0 0>
 		     , <&key_physical_attrs 100 100  100    0 0 0 0>
 		     , <&key_physical_attrs 100 100  200    0 0 0 0>
-		     , <&key_physical_attrs 100 100  300    0 0 0 0>
 		     , <&key_physical_attrs 100 100    0  100 0 0 0>
 		     , <&key_physical_attrs 100 100  100  100 0 0 0>
 		     , <&key_physical_attrs 100 100  200  100 0 0 0>
-		     , <&key_physical_attrs 100 100  300  100 0 0 0>
 		     , <&key_physical_attrs 100 100    0  200 0 0 0>
 		     , <&key_physical_attrs 100 100  100  200 0 0 0>
 		     , <&key_physical_attrs 100 100  200  200 0 0 0>
