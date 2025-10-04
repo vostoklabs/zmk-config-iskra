@@ -39,5 +39,6 @@
 		combo_bt: combo_bt { timeout-ms = <150>; key-positions = <3 4 5>; bindings = <&to 1>; };
 		combo_base: combo_base { timeout-ms = <150>; key-positions = <0 1 2>; bindings = <&to 0>; };
 		combo_l3: combo_l3 { timeout-ms = <150>; key-positions = <6 7 8>; bindings = <&to 2>; };
+		combo_studio_unlock: combo_studio_unlock { timeout-ms = <150>; key-positions = <0 1>; bindings = <&studio_unlock>; };
 	};
 };
