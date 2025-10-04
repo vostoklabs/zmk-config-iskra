@@ -20,7 +20,7 @@
 			bindings = <
 				&studio_unlock &trans &trans &none
 				&trans &trans &trans &none
-				&bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR
+			&bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR
 			>;
 		};
 
@@ -36,8 +36,8 @@
 
 	combos {
 		compatible = "zmk,combos";
-		combo_bt: combo_bt { timeout-ms = <50>; key-positions = <4 5 6>; bindings = <&to 1>; };
-		combo_base: combo_base { timeout-ms = <50>; key-positions = <0 1 2>; bindings = <&to 0>; };
-		combo_l3: combo_l3 { timeout-ms = <50>; key-positions = <8 9 10>; bindings = <&to 2>; };
+		combo_base: combo_base { timeout-ms = <100>; key-positions = <0 1 2>; bindings = <&to 0>; };
+		combo_bt: combo_bt { timeout-ms = <100>; key-positions = <3 4 5>; bindings = <&to 1>; };
+		combo_l3: combo_l3 { timeout-ms = <100>; key-positions = <6 7 8>; bindings = <&to 2>; };
 	};
 };
