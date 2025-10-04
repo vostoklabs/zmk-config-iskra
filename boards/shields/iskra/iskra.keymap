@@ -18,7 +18,7 @@
 		bt_layer {
 			display-name = "Bluetooth";
 			bindings = <
-				&trans &trans &trans &none
+				&studio_unlock &trans &trans &none
 				&trans &trans &trans &none
 				&bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR
 			>;
